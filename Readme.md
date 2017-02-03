@@ -68,7 +68,7 @@ Read more about Activities on [Androids Loaders Documentation][1cf]
 [1ca]: #
 [1cb]: #
 [1cc]: #
-[1cd]: #
+[1cd]: ./AndroidCertificationPreparation/app/src/main/res/layout/listitem_contacts.xml
 [1ce]: #
 [1cf]: https://developer.android.com/guide/components/loaders.html
 [2]: #2-application-user-interface-ui-and-user-experience-ux
