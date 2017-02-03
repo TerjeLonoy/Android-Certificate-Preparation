@@ -21,7 +21,23 @@ A functional requirement describes what a software system should do, while non-f
 **Non-functional requirement example**: Registration confirmation email should be sent within 30 seconds of registration
 
 ### 1b. Create an Activity that displays a layout resource
-The bare minimum of creating an Activity and displaying a layout can be seen in this projects [BaseActivity.java][1ba]
+The bare minimum of creating an Activity and displaying a layout:
+
+```java
+package com.somesite.somecompany.appname.activities;
+
+import android.app.Activity;
+import android.os.Bundle;
+import com.somesite.somecompany.appname.R;
+
+public class BasicActivity extends Activity{
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_basic);
+    }
+}
+```
 
 ## 2. Application User Interface (UI) and User Experience (UX)
 
@@ -32,7 +48,6 @@ The bare minimum of creating an Activity and displaying a layout can be seen in 
 [1]: #1-fundamental-application-components
 [1a]: #1a-describe-an-applications-key-functional-and-nonfunctional-requirement
 [1b]: #1b-create-an-activity-that-displays-a-layout-resource
-[1ba]: vg.no
 [2]: #2-application-user-interface-ui-and-user-experience-ux
 [3]: #3-persistant-data-storage
 [4]: #4-testing-and-debugging
