@@ -51,7 +51,7 @@ This project contains a barebones implementation of a Loader. [LoaderExampleActi
 
 ![loaders preview](images/loaders.png)
 
-Read more about Activities on [Androids Loaders Documentation][1cf]
+Read more about Loaders on [Androids Loaders Documentation][1cf]
 
 ## 2. Application User Interface (UI) and User Experience (UX)
 
@@ -65,11 +65,11 @@ Read more about Activities on [Androids Loaders Documentation][1cf]
 [1ba]: https://developer.android.com/reference/android/app/Activity.html
 [1bb]: https://developer.android.com/guide/components/activities/activity-lifecycle.html
 [1c]: #1c-fetch-local-data-from-disk-using-a-loader-on-a-background-thread
-[1ca]: #
-[1cb]: #
-[1cc]: #
+[1ca]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/activities/LoaderExampleActivity.java
+[1cb]: ./AndroidCertificationPreparation/app/src/main/res/layout/activity_loader_example.xml
+[1cc]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/loaders/ContactLoader.java
 [1cd]: ./AndroidCertificationPreparation/app/src/main/res/layout/listitem_contacts.xml
-[1ce]: #
+[1ce]: ./AndroidCertificationPreparation/app/src/main/res/layout/listview_contacts.xml
 [1cf]: https://developer.android.com/guide/components/loaders.html
 [2]: #2-application-user-interface-ui-and-user-experience-ux
 [3]: #3-persistant-data-storage
