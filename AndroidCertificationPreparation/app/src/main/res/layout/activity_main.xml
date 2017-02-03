@@ -11,7 +11,18 @@
     tools:context="com.acp.terjelonoy.androidcertificationpreparation.MainActivity">
 
     <TextView
+        android:id="@+id/intro_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="@string/intro_text" />
+
+    <Button
+        android:id="@+id/loaders_example_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intro_text"
+        android:text="@string/loaders_example_button"
+        android:textAlignment="textStart"
+        android:gravity="start|center"
+        android:layout_marginTop="@dimen/activity_vertical_margin"/>
 </RelativeLayout>
