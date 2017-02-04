@@ -4,6 +4,8 @@
   * [1a. Describe an application's key functional and nonfunctional requirements][1a]
   * [1b. Create an Activity that displays a layout resource][1b]
   * [1c. Fetch local data from disk using a Loader on a background thread][1c]
+  * [1d. Propagate data changes through a Loader to the UI][1d]
+  * [1e. Schedule a time-sensitive task using alarms][1e]
 
 * [2. Application User Interface (UI) and User Experience (UX)][2]
 
@@ -53,6 +55,14 @@ This project contains a barebones implementation of a Loader. [LoaderExampleActi
 
 Read more about Loaders on [Androids Loaders Documentation][1cf]
 
+### 1d. Propagate data changes through a Loader to the UI
+Propagating data with a Loader is explained and illustrated under [section 1c.][1c]
+
+### 1e. Schedule a time-sensitive task using alarms
+Alarms are used to send a Broadcast at a certain point in time. The Broadcast is picked up by a Receiver, that will perform a given task, such as sending a Notification to the device.
+
+This project contains an implementation of an Alarm that sends a Notification at a point in time. [AlarmScheduleManager.java][1ea] starts an Alarm that triggers a Broadcast after 15 seconds. [AlarmReceiver.java][1eb] receives this Broadcast and sends a Notification to the user. When the Notification is tapped, [AlarmWakeActivity.java][1ec] is started.
+
 ## 2. Application User Interface (UI) and User Experience (UX)
 
 ## 3. Persistent Data Storage
@@ -71,6 +81,11 @@ Read more about Loaders on [Androids Loaders Documentation][1cf]
 [1cd]: ./AndroidCertificationPreparation/app/src/main/res/layout/listitem_contacts.xml
 [1ce]: ./AndroidCertificationPreparation/app/src/main/res/layout/listview_contacts.xml
 [1cf]: https://developer.android.com/guide/components/loaders.html
+[1d]: #1d-propagate-data-changes-through-a-loader-to-the-ui
+[1e]: #1e-schedule-a-time-sensitive-task-using-alarms
+[1ea]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/managers/AlarmScheduleManager.java
+[1eb]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/receivers/AlarmReceiver.java
+[1ec]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/activities/AlarmWakeActivity.java
 [2]: #2-application-user-interface-ui-and-user-experience-ux
 [3]: #3-persistant-data-storage
 [4]: #4-testing-and-debugging
