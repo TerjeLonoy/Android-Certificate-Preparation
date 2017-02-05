@@ -85,6 +85,35 @@ Read more about JobScheduler at [Android JobScheduler Documentation][1fc] and [A
 Executing a background task inside of a Service is explained and illustrated under [section 1f.][1f]
 
 ### 1h. Implement non-standard task stack navigation (deep links)
+Deep-linking enables other means of opening your application, such as from a website or another application. Setting up deep-links on its own is done purely in the manifest with an intent-filter.
+
+```xml
+  <activity android:name=".MainActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data android:scheme="example"
+                android:host="androidcert" />
+        </intent-filter>
+    </activity>
+```
+
+Now this can easily be tested through the terminal:
+```
+adb shell am start -W -a android.intent.action.VIEW -d <URI> <PACKAGE>
+```
+
+Opening the app this way, you can pass params to an Intent that the app can read. If we did something like example://androidcert?activity=AnotherActivity, we could read the ?activity part and redirect the user further inside the application.
+
+An app can open other apps this way, for example the phone app:
+```java
+Uri number = Uri.parse("tel:5551234");
+Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
+```
 
 Read more about deep-linking at [Android deep-linking Documentation][1ha]
 
