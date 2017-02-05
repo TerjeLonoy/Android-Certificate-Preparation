@@ -5,8 +5,12 @@
     <string name="intro_text">This is an example application for showing different tasks required to pass the Android Certification Exams</string>
     <string name="loaders_example_button">Loaders example</string>
     <string name="alarm_example_button">Schedule alarm in 15 seconds</string>
+    <string name="jobschedule_example_button">JobSchedule example</string>
 
     <string name="no_phonenumbers">No phonenumbers found, try adding a contact to your phone</string>
 
     <string name="alarm_wake_intro">This activity was opened by an alarm!</string>
+
+    <string name="jobschedule_intro">Some content will load here once you connect to a network</string>
+    <string name="jobschedule_done">Our job was completed succesfully!</string>
 </resources>

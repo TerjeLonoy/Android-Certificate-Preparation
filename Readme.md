@@ -6,6 +6,7 @@
   * [1c. Fetch local data from disk using a Loader on a background thread][1c]
   * [1d. Propagate data changes through a Loader to the UI][1d]
   * [1e. Schedule a time-sensitive task using alarms][1e]
+  * [1f. Schedule a background task using JobScheduler][1f]
 
 * [2. Application User Interface (UI) and User Experience (UX)][2]
 
@@ -53,6 +54,8 @@ This project contains a barebones implementation of a Loader. [LoaderExampleActi
 
 ![loaders preview](images/loaders.png)
 
+***Note:*** This example is running on main thread, see [section 1f.][1f] for a background thread example.
+
 Read more about Loaders on [Androids Loaders Documentation][1cf]
 
 ### 1d. Propagate data changes through a Loader to the UI
@@ -62,6 +65,17 @@ Propagating data with a Loader is explained and illustrated under [section 1c.][
 Alarms are used to send a Broadcast at a certain point in time. The Broadcast is picked up by a Receiver, that will perform a given task, such as sending a Notification to the device.
 
 This project contains an implementation of an Alarm that sends a Notification at a point in time. [AlarmScheduleManager.java][1ea] starts an Alarm that triggers a Broadcast after 15 seconds. [AlarmReceiver.java][1eb] receives this Broadcast and sends a Notification to the user. When the Notification is tapped, [AlarmWakeActivity.java][1ec] is started.
+
+Read more about Alarms on [Android AlarmManager Documentation][1ed]
+
+### 1f. Schedule a background task using JobScheduler
+JobScheduler is similar to Alarms in the sense that both are used to schedule tasks, however, Alarms are used to trigger task at a specified time. JobScheduler can be used to schedule tasks when a certain device state condition is met, such as when the network is online again. Can also be used for periodically tasks, and most importantly, can persist through device reboot.
+
+This project contains an implementation of JobScheduler that will only start if a network condition is met (needs to have a network connection). If said condition is not met, the Job will not run.
+
+[JobSchedulerExampleActivity.java][1fa] will start a Job and register a BroadcastReceiver so it knowns when the Job has finished. The Job is handled by [JobScheduleService.java][1fb] which will execute a background task, which in return will Broadcast its result.
+
+To test this scenario properly, try to open [JobSchedulerExampleActivity.java][1fa] with, and without an active network connection to see the difference in results.
 
 ## 2. Application User Interface (UI) and User Experience (UX)
 
@@ -86,6 +100,10 @@ This project contains an implementation of an Alarm that sends a Notification at
 [1ea]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/managers/AlarmScheduleManager.java
 [1eb]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/receivers/AlarmReceiver.java
 [1ec]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/activities/AlarmWakeActivity.java
+[1ed]: https://developer.android.com/reference/android/app/AlarmManager.html
+[1f]: #1f-schedule-a-background-task-using-jobscheduler
+[1fa]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/activities/JobScheduleService.java
+[1fb]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/services/JobSchedulerExampleActivity.java
 [2]: #2-application-user-interface-ui-and-user-experience-ux
 [3]: #3-persistant-data-storage
 [4]: #4-testing-and-debugging

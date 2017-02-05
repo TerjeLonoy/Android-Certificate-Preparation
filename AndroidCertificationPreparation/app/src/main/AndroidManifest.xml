@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -23,8 +24,13 @@
 
         <activity android:name=".activities.LoaderExampleActivity" />
         <activity android:name=".activities.AlarmWakeActivity" />
+        <activity android:name=".activities.JobSchedulerExampleActivity" />
 
         <receiver android:name=".receivers.AlarmReceiver" />
+
+        <service
+            android:name=".services.JobScheduleService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
     </application>
 
 </manifest>

@@ -34,4 +34,13 @@
         android:text="@string/alarm_example_button"
         android:textAlignment="textStart"
         android:gravity="start|center" />
+
+    <Button
+        android:id="@+id/jobschedule_example_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alarm_example_button"
+        android:text="@string/jobschedule_example_button"
+        android:textAlignment="textStart"
+        android:gravity="start|center" />
 </RelativeLayout>
