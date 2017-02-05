@@ -8,6 +8,7 @@
   * [1e. Schedule a time-sensitive task using alarms][1e]
   * [1f. Schedule a background task using JobScheduler][1f]
   * [1g. Execute a background task inside of a Service][1g]
+  * [1h. Implement non-standard task stack navigation (deep links)][1h]
 
 * [2. Application User Interface (UI) and User Experience (UX)][2]
 
@@ -78,8 +79,14 @@ This project contains an implementation of JobScheduler that will only start if 
 
 To test this scenario properly, try to open [JobSchedulerExampleActivity.java][1fa] with, and without an active network connection to see the difference in results.
 
+Read more about JobScheduler at [Android JobScheduler Documentation][1fc] and [Android JobInfo Documentation][1fd]
+
 ### 1g. Execute a background task inside of a Service
 Executing a background task inside of a Service is explained and illustrated under [section 1f.][1f]
+
+### 1h. Implement non-standard task stack navigation (deep links)
+
+Read more about deep-linking at [Android deep-linking Documentation][1ha]
 
 ## 2. Application User Interface (UI) and User Experience (UX)
 
@@ -108,7 +115,11 @@ Executing a background task inside of a Service is explained and illustrated und
 [1f]: #1f-schedule-a-background-task-using-jobscheduler
 [1fa]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/activities/JobScheduleService.java
 [1fb]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/services/JobSchedulerExampleActivity.java
+[1fc]: https://developer.android.com/reference/android/app/job/JobScheduler.html
+[1fd]: https://developer.android.com/reference/android/app/job/JobInfo.html
 [1g]: #1g-execute-a-background-task-inside-of-a-service
+[1h]: #1h-implement-non-standard-task-stack-navigation-(deep-links)
+[1ha]: https://developer.android.com/training/app-indexing/deep-linking.html
 [2]: #2-application-user-interface-ui-and-user-experience-ux
 [3]: #3-persistant-data-storage
 [4]: #4-testing-and-debugging
