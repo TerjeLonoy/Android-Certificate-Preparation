@@ -9,6 +9,7 @@
   * [1f. Schedule a background task using JobScheduler][1f]
   * [1g. Execute a background task inside of a Service][1g]
   * [1h. Implement non-standard task stack navigation (deep links)][1h]
+  * [1i. Integrate code from an external support library][1i]
 
 * [2. Application User Interface (UI) and User Experience (UX)][2]
 
@@ -117,6 +118,9 @@ Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
 
 Read more about deep-linking at [Android deep-linking Documentation][1ha]
 
+### 1i. Integrate code from an external support library
+Read about [gradle dependencies][1ia]
+
 ## 2. Application User Interface (UI) and User Experience (UX)
 
 ## 3. Persistent Data Storage
@@ -149,6 +153,8 @@ Read more about deep-linking at [Android deep-linking Documentation][1ha]
 [1g]: #1g-execute-a-background-task-inside-of-a-service
 [1h]: #1h-implement-non-standard-task-stack-navigation-(deep-links)
 [1ha]: https://developer.android.com/training/app-indexing/deep-linking.html
+[1i]: #1i-integrate-code-from-an-external-support-library
+[1ia]: https://docs.gradle.org/current/userguide/dependency_management.html
 [2]: #2-application-user-interface-ui-and-user-experience-ux
 [3]: #3-persistant-data-storage
 [4]: #4-testing-and-debugging
