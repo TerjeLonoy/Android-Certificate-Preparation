@@ -7,6 +7,7 @@
   * [1d. Propagate data changes through a Loader to the UI][1d]
   * [1e. Schedule a time-sensitive task using alarms][1e]
   * [1f. Schedule a background task using JobScheduler][1f]
+  * [1g. Execute a background task inside of a Service][1g]
 
 * [2. Application User Interface (UI) and User Experience (UX)][2]
 
@@ -77,6 +78,9 @@ This project contains an implementation of JobScheduler that will only start if 
 
 To test this scenario properly, try to open [JobSchedulerExampleActivity.java][1fa] with, and without an active network connection to see the difference in results.
 
+### 1g. Execute a background task inside of a Service
+Executing a background task inside of a Service is explained and illustrated under [section 1f.][1f]
+
 ## 2. Application User Interface (UI) and User Experience (UX)
 
 ## 3. Persistent Data Storage
@@ -104,6 +108,7 @@ To test this scenario properly, try to open [JobSchedulerExampleActivity.java][1
 [1f]: #1f-schedule-a-background-task-using-jobscheduler
 [1fa]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/activities/JobScheduleService.java
 [1fb]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/services/JobSchedulerExampleActivity.java
+[1g]: #1g-execute-a-background-task-inside-of-a-service
 [2]: #2-application-user-interface-ui-and-user-experience-ux
 [3]: #3-persistant-data-storage
 [4]: #4-testing-and-debugging
