@@ -15,6 +15,8 @@
   * [2a. Mock up the main screens and navigation flow of the application][2a]
   * [2b. Describe interactions between UI, background task, and data persistence][2b]
   * [2c. Construct a layout using XML or Java code][2c]
+  * [2d. Create a custom view class and add it to a layout][2d]
+
 * [3. Persistent Data Storage][3]
 
 * [4. Testing and Debugging][4]
@@ -135,6 +137,15 @@ Read about [Androids Wireframe Documentation][2aa]
 ### 2c. Construct a layout using XML or Java code
 Read about [Androids Layout Documentation][2ca] and see example in [activity_main.xml][2cb]
 
+### 2d. Create a custom view class and add it to a layout
+To create a custom view, you have to extend the View Class, or any existing children of the View Class such as TextView. See [CustomViewActivity][2da] for an example.
+
+A View has two very important functions that should always be implemented. onDraw() will pass along a Canvas that lets you can draw elements on it, while onMeasure() will let the application know how much space the custom View should take.
+
+Custom View's can take any number of attributes, and should be defined in [values/attrs.xml][2db], these attributes is handled by CustomViewActivity in this example. And is passed along from our layout ([activity_customview.xml][2dc]).
+
+Read about [Androids Creating Custom Views Documentation][2dd].
+
 ## 3. Persistent Data Storage
 
 ## 4. Testing and Debugging
@@ -174,5 +185,10 @@ Read about [Androids Layout Documentation][2ca] and see example in [activity_mai
 [2c]: #2c-construct-a-layout-using-xml-or-java-code
 [2ca]: https://developer.android.com/guide/topics/ui/declaring-layout.html
 [2cb]: ./AndroidCertificationPreparation/app/src/main/res/layout/activity_main.xml
+[2d]: #2d-create-a-custom-view-class-and-add-it-to-a-layout
+[2da]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/activities/CustomViewActivity.java
+[2db]: ./AndroidCertificationPreparation/app/src/main/res/values/attrs.xml
+[2dc]: ./AndroidCertificationPreparation/app/src/main/res/layout/activity_customview.xml
+[2dd]: https://developer.android.com/training/custom-views/index.html
 [3]: #3-persistant-data-storage
 [4]: #4-testing-and-debugging

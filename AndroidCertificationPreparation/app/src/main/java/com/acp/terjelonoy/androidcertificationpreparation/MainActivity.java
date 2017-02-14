@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.acp.terjelonoy.androidcertificationpreparation.activities.CustomViewActivity;
 import com.acp.terjelonoy.androidcertificationpreparation.activities.JobSchedulerExampleActivity;
 import com.acp.terjelonoy.androidcertificationpreparation.activities.LoaderExampleActivity;
 import com.acp.terjelonoy.androidcertificationpreparation.managers.AlarmScheduleManager;
@@ -51,6 +52,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, JobSchedulerExampleActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button customViewExampleButton = (Button) findViewById(R.id.customview_example_button);
+        customViewExampleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, CustomViewActivity.class);
                 startActivity(intent);
             }
         });

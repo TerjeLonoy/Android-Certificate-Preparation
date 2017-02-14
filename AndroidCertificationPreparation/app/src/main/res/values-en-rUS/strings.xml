@@ -6,6 +6,7 @@
     <string name="loaders_example_button">Loaders example</string>
     <string name="alarm_example_button">Schedule alarm in 15 seconds</string>
     <string name="jobschedule_example_button">JobSchedule example</string>
+    <string name="customview_example_button">Custom view example</string>
 
     <string name="no_phonenumbers">No phonenumbers found, try adding a contact to your phone</string>
 
