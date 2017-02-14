@@ -13,6 +13,8 @@
 
 * [2. Application User Interface (UI) and User Experience (UX)][2]
   * [2a. Mock up the main screens and navigation flow of the application][2a]
+  * [2b. Describe interactions between UI, background task, and data persistence][2b]
+  * [2c. Construct a layout using XML or Java code][2c]
 * [3. Persistent Data Storage][3]
 
 * [4. Testing and Debugging][4]
@@ -127,6 +129,12 @@ Implementation of the visual and navigational components of an application's des
 ### 2a. Mock up the main screens and navigation flow of the application
 Read about [Androids Wireframe Documentation][2aa]
 
+### 2b. Describe interactions between UI, background task, and data persistence
+Read about [Androids Wireframe Documentation][2aa]
+
+### 2c. Construct a layout using XML or Java code
+Read about [Androids Layout Documentation][2ca] and see example in [activity_main.xml][2cb]
+
 ## 3. Persistent Data Storage
 
 ## 4. Testing and Debugging
@@ -162,5 +170,9 @@ Read about [Androids Wireframe Documentation][2aa]
 [2]: #2-application-user-interface-ui-and-user-experience-ux
 [2a]: #2a-mock-up-the-main-screens-and-navigation-flow-of-the-application
 [2aa]: https://developer.android.com/training/design-navigation/wireframing.html
+[2b]: #2b-describe-interactions-between-ui-background-task-and-data-persistence
+[2c]: #2c-construct-a-layout-using-xml-or-java-code
+[2ca]: https://developer.android.com/guide/topics/ui/declaring-layout.html
+[2cb]: ./AndroidCertificationPreparation/app/src/main/res/layout/activity_main.xml
 [3]: #3-persistant-data-storage
 [4]: #4-testing-and-debugging
