@@ -12,7 +12,7 @@
   * [1i. Integrate code from an external support library][1i]
 
 * [2. Application User Interface (UI) and User Experience (UX)][2]
-
+  * [2a. Mock up the main screens and navigation flow of the application][2a]
 * [3. Persistent Data Storage][3]
 
 * [4. Testing and Debugging][4]
@@ -122,6 +122,10 @@ Read more about deep-linking at [Android deep-linking Documentation][1ha]
 Read about [gradle dependencies][1ia]
 
 ## 2. Application User Interface (UI) and User Experience (UX)
+Implementation of the visual and navigational components of an application's design. This includes constructing layouts–using both XML and Java code–that consist of the standard framework UI elements as well as custom views. Candidates should have a working knowledge of using view styles and theme attributes to apply a consistent look and feel across an entire application. Understanding of how to include features that expand the application's audience through accessibility and localization may also be required.
+
+### 2a. Mock up the main screens and navigation flow of the application
+Read about [Androids Wireframe Documentation][2aa]
 
 ## 3. Persistent Data Storage
 
@@ -156,5 +160,7 @@ Read about [gradle dependencies][1ia]
 [1i]: #1i-integrate-code-from-an-external-support-library
 [1ia]: https://docs.gradle.org/current/userguide/dependency_management.html
 [2]: #2-application-user-interface-ui-and-user-experience-ux
+[2a]: #2a-mock-up-the-main-screens-and-navigation-flow-of-the-application
+[2aa]: https://developer.android.com/training/design-navigation/wireframing.html
 [3]: #3-persistant-data-storage
 [4]: #4-testing-and-debugging
