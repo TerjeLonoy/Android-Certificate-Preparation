@@ -186,7 +186,7 @@ Read about [Androids Creating Custom Views Documentation][2dd].
 [2ca]: https://developer.android.com/guide/topics/ui/declaring-layout.html
 [2cb]: ./AndroidCertificationPreparation/app/src/main/res/layout/activity_main.xml
 [2d]: #2d-create-a-custom-view-class-and-add-it-to-a-layout
-[2da]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/activities/CustomViewActivity.java
+[2da]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/customviews/DiscoText.java
 [2db]: ./AndroidCertificationPreparation/app/src/main/res/values/attrs.xml
 [2dc]: ./AndroidCertificationPreparation/app/src/main/res/layout/activity_customview.xml
 [2dd]: https://developer.android.com/training/custom-views/index.html
