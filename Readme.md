@@ -138,11 +138,11 @@ Read about [Androids Wireframe Documentation][2aa]
 Read about [Androids Layout Documentation][2ca] and see example in [activity_main.xml][2cb]
 
 ### 2d. Create a custom view class and add it to a layout
-To create a custom view, you have to extend the View Class, or any existing children of the View Class such as TextView. See [CustomViewActivity][2da] for an example.
+To create a custom view, you have to extend the View Class, or any existing children of the View Class such as TextView. See [DiscoText.java][2da] for an example.
 
 A View has two very important functions that should always be implemented. onDraw() will pass along a Canvas that lets you can draw elements on it, while onMeasure() will let the application know how much space the custom View should take.
 
-Custom View's can take any number of attributes, and should be defined in [values/attrs.xml][2db], these attributes is handled by CustomViewActivity in this example. And is passed along from our layout ([activity_customview.xml][2dc]).
+Custom View's can take any number of attributes, and should be defined in [values/attrs.xml][2db], these attributes is handled by [DiscoText.java][2da] in this example. And is passed along from our layout ([activity_customview.xml][2dc]).
 
 Read about [Androids Creating Custom Views Documentation][2dd].
 
