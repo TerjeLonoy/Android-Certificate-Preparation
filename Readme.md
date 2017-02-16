@@ -142,6 +142,8 @@ To create a custom view, you have to extend the View Class, or any existing chil
 
 A View has two very important functions that should always be implemented. onDraw() will pass along a Canvas that lets you can draw elements on it, while onMeasure() will let the application know how much space the custom View should take.
 
+Canvas Pairs well with [Paint][2de], which lets you draw lines, arcs and so on, pretty similar similar to Javascript Canvas.
+
 Custom View's can take any number of attributes, and should be defined in [values/attrs.xml][2db], these attributes is handled by [DiscoText.java][2da] in this example. And is passed along from our layout ([activity_customview.xml][2dc]).
 
 Read about [Androids Creating Custom Views Documentation][2dd].
@@ -190,5 +192,6 @@ Read about [Androids Creating Custom Views Documentation][2dd].
 [2db]: ./AndroidCertificationPreparation/app/src/main/res/values/attrs.xml
 [2dc]: ./AndroidCertificationPreparation/app/src/main/res/layout/activity_customview.xml
 [2dd]: https://developer.android.com/training/custom-views/index.html
+[2de]: https://developer.android.com/reference/android/graphics/Paint.html
 [3]: #3-persistant-data-storage
 [4]: #4-testing-and-debugging

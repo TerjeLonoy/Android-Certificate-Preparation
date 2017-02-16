@@ -31,7 +31,6 @@ public class JobSchedulerExampleActivity extends Activity {
         setContentView(R.layout.activity_jobschedule_example);
 
         jobDoneLabel = (TextView) activity.findViewById(R.id.job_done);
-        jobDoneLabel.setVisibility(View.GONE);
 
         registerJob();
         addReceiver();
@@ -69,5 +68,17 @@ public class JobSchedulerExampleActivity extends Activity {
         };
 
         registerReceiver(receiver, new IntentFilter(JobScheduleService.JOB_SCHEDULER_DONE));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                jobDoneLabel.setVisibility(View.GONE);
+            }
+        });
     }
 }
