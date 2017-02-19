@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.acp.terjelonoy.androidcertificationpreparation.activities.CustomViewActivity;
+import com.acp.terjelonoy.androidcertificationpreparation.activities.DatabaseActivity;
 import com.acp.terjelonoy.androidcertificationpreparation.activities.JobSchedulerExampleActivity;
 import com.acp.terjelonoy.androidcertificationpreparation.activities.LoaderExampleActivity;
 import com.acp.terjelonoy.androidcertificationpreparation.managers.AlarmScheduleManager;
@@ -51,18 +52,22 @@ public class MainActivity extends AppCompatActivity {
         jobScheduleExampleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, JobSchedulerExampleActivity.class);
+            Intent intent = new Intent(context, JobSchedulerExampleActivity.class);
                 startActivity(intent);
             }
         });
 
         Button customViewExampleButton = (Button) findViewById(R.id.customview_example_button);
-        customViewExampleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, CustomViewActivity.class);
-                startActivity(intent);
-            }
+        customViewExampleButton.setOnClickListener( view -> {
+            Intent intent = new Intent(context, CustomViewActivity.class);
+            startActivity(intent);
         });
+
+        Button databaseExampleButton = (Button) findViewById(R.id.database_example_button);
+        databaseExampleButton.setOnClickListener( view -> {
+            Intent intent = new Intent(context, DatabaseActivity.class);
+            startActivity(intent);
+        });
+
     }
 }
