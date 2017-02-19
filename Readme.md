@@ -18,6 +18,8 @@
   * [2d. Create a custom view class and add it to a layout][2d]
 
 * [3. Persistent Data Storage][3]
+  * [3a. Define a database schema; include tables, fields, and indices][3a]
+
 
 * [4. Testing and Debugging][4]
 
@@ -150,6 +152,26 @@ Read about [Androids Creating Custom Views Documentation][2dd].
 
 ## 3. Persistent Data Storage
 
+Determining appropriate use cases for local persisted data, and designing solutions to implement data storage using files, preferences, and databases. This includes implementing strategies for bundling static data with applications, caching data from remote sources, and managing user-generated private data. Candidates should also be able to describe platform features that allow applications to store data securely and share that data with other applications in a secure manner.
+
+### 3a. Define a database schema; include tables, fields, and indices
+
+A schema are also used to define the structure of entire databases and the relationship between the various tables contained in each database.
+E.g.: 
+
+```sql
+
+CREATE TABLE contacts (
+  id INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  phone_number TEXT NOT NULL,
+);
+
+
+CREATE INDEX contacts_id_idx ON contacts(id);
+
+```
+
 ## 4. Testing and Debugging
 
 [1]: #1-fundamental-application-components
@@ -194,4 +216,5 @@ Read about [Androids Creating Custom Views Documentation][2dd].
 [2dd]: https://developer.android.com/training/custom-views/index.html
 [2de]: https://developer.android.com/reference/android/graphics/Paint.html
 [3]: #3-persistant-data-storage
+[3a]: #1a-describe-an-applications-key-functional-and-nonfunctional-requirement
 [4]: #4-testing-and-debugging
