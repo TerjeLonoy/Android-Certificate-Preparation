@@ -216,5 +216,5 @@ CREATE INDEX contacts_id_idx ON contacts(id);
 [2dd]: https://developer.android.com/training/custom-views/index.html
 [2de]: https://developer.android.com/reference/android/graphics/Paint.html
 [3]: #3-persistant-data-storage
-[3a]: #1a-describe-an-applications-key-functional-and-nonfunctional-requirement
+[3a]: #3a-describe-an-applications-key-functional-and-nonfunctional-requirement
 [4]: #4-testing-and-debugging
