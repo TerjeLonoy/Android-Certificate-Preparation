@@ -153,7 +153,7 @@ Read about [Androids Creating Custom Views Documentation][2dd].
 
 Determining appropriate use cases for local persisted data, and designing solutions to implement data storage using files, preferences, and databases. This includes implementing strategies for bundling static data with applications, caching data from remote sources, and managing user-generated private data. Candidates should also be able to describe platform features that allow applications to store data securely and share that data with other applications in a secure manner.
 
-### 3a. Define a database schema; include tables, fields, and indices
+### 3a. Define a database schema; include tables, fields, and indices[3a]
 
 A schema are also used to define the structure of entire databases and the relationship between the various tables contained in each database.
 E.g.: 
