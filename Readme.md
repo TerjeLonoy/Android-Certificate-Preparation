@@ -126,6 +126,8 @@ Read more about deep-linking at [Android deep-linking Documentation][1ha]
 ### 1i. Integrate code from an external support library
 Read about [gradle dependencies][1ia]
 
+***Note:*** This project builds with [the Jack Toolchain][1ib] to support `Java 1.8` functionality.
+
 ## 2. Application User Interface (UI) and User Experience (UX)
 Implementation of the visual and navigational components of an application's design. This includes constructing layouts–using both XML and Java code–that consist of the standard framework UI elements as well as custom views. Candidates should have a working knowledge of using view styles and theme attributes to apply a consistent look and feel across an entire application. Understanding of how to include features that expand the application's audience through accessibility and localization may also be required.
 
@@ -201,6 +203,7 @@ CREATE INDEX contacts_id_idx ON contacts(id);
 [1ha]: https://developer.android.com/training/app-indexing/deep-linking.html
 [1i]: #1i-integrate-code-from-an-external-support-library
 [1ia]: https://docs.gradle.org/current/userguide/dependency_management.html
+[1ib]: https://source.android.com/source/jack.html#the_jack_toolchain
 [2]: #2-application-user-interface-ui-and-user-experience-ux
 [2a]: #2a-mock-up-the-main-screens-and-navigation-flow-of-the-application
 [2aa]: https://developer.android.com/training/design-navigation/wireframing.html
