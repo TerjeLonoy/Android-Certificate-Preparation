@@ -153,7 +153,7 @@ Read about [Androids Creating Custom Views Documentation][2dd].
 
 Determining appropriate use cases for local persisted data, and designing solutions to implement data storage using files, preferences, and databases. This includes implementing strategies for bundling static data with applications, caching data from remote sources, and managing user-generated private data. Candidates should also be able to describe platform features that allow applications to store data securely and share that data with other applications in a secure manner.
 
-### 3a. Define a database schema; include tables, fields, and indices[3a]
+### 3a. Define a database schema; include tables, fields, and indices
 
 A schema are also used to define the structure of entire databases and the relationship between the various tables contained in each database.
 E.g.: 
@@ -215,5 +215,5 @@ CREATE INDEX contacts_id_idx ON contacts(id);
 [2dd]: https://developer.android.com/training/custom-views/index.html
 [2de]: https://developer.android.com/reference/android/graphics/Paint.html
 [3]: #3-persistant-data-storage
-[3a]: #3a-define-a-database-schema;-include-tables,-fields,-and-indices
+[3a]: #3a-define-a-database-schema-include-tables-fields-and-indices
 [4]: #4-testing-and-debugging
