@@ -20,7 +20,6 @@
 * [3. Persistent Data Storage][3]
   * [3a. Define a database schema; include tables, fields, and indices][3a]
 
-
 * [4. Testing and Debugging][4]
 
 ## 1. Fundamental Application Components
@@ -216,5 +215,5 @@ CREATE INDEX contacts_id_idx ON contacts(id);
 [2dd]: https://developer.android.com/training/custom-views/index.html
 [2de]: https://developer.android.com/reference/android/graphics/Paint.html
 [3]: #3-persistant-data-storage
-[3a]: #3a-describe-an-applications-key-functional-and-nonfunctional-requirement
+[3a]: #3a-define-a-database-schema;-include-tables,-fields,-and-indices
 [4]: #4-testing-and-debugging
