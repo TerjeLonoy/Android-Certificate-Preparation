@@ -29,6 +29,11 @@
   * [4f. Debug and fix an activity lifecycle issue][4f]
   * [4g. Debug and fix an issue binding data to views][4g]
 
+* [5. Enhanced System Integration][5]
+  * [5a. Create an app widget that displays on the device home screen][5a]
+  * [5b. Implement a task to update the app widget periodically][5b]
+  * [5c. Create and display a notification to the user][5c]
+
 ## 1. Fundamental Application Components
 Understanding of Android's top-level application components (Activity, Service, Broadcast Receiver, Content Provider) and the lifecycle associated with each one. Candidates should be able to describe the types of application logic that would be best suited for each component, and whether that component is executing in the foreground or in the background. This includes strategies for determining how and when to execute background work.
 
@@ -237,6 +242,14 @@ Fixing lifecycle issues can be simplified by putting breakpoints at the start an
 ### 4g. Debug and fix an issue binding data to views
 Data binding issues are often cause by either null pointers or type mismatch. Another big offender is trying to bind data to a view before the views activity has been loaded.
 
+## 5. Enhanced System Integration
+
+### 5a. Create an app widget that displays on the device home screen
+
+### 5b. Implement a task to update the app widget periodically
+
+### 5c. Create and display a notification to the user
+
 [1]: #1-fundamental-application-components
 [1a]: #1a-describe-an-applications-key-functional-and-nonfunctional-requirement
 [1b]: #1b-create-an-activity-that-displays-a-layout-resource
@@ -295,3 +308,7 @@ Data binding issues are often cause by either null pointers or type mismatch. An
 [4e]: #4e-debug-and-fix-an-application-crash-uncaught-exception
 [4f]: #4f-debug-and-fix-an-activity-lifecycle-issue
 [4g]: #4g-debug-and-fix-an-issue-binding-data-to-views
+[5]: #5-enhanced-system-integration
+[5a]: #5a-create-an-app-widget-that-displays-on-the-device-home-screen
+[5b]: #5b-implement-a-task-to-update-the-app-widget-periodically
+[5c]: #5c-create-and-display-a-notification-to-the-user
