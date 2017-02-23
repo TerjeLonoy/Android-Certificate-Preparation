@@ -25,6 +25,7 @@
   * [4b. Write and execute a device UI test][4b]
   * [4c. Given a problem description, replicate the failure][4c]
   * [4d. Use the system log to output debug information][4d]
+  * [4e. Debug and fix an application crash (uncaught exception)][4e]
 
 ## 1. Fundamental Application Components
 Understanding of Android's top-level application components (Activity, Service, Broadcast Receiver, Content Provider) and the lifecycle associated with each one. Candidates should be able to describe the types of application logic that would be best suited for each component, and whether that component is executing in the foreground or in the background. This includes strategies for determining how and when to execute background work.
@@ -225,6 +226,9 @@ Leaving this blank as there is not really any documentation that can be useful h
 ### 4d. Use the system log to output debug information
 Read about [Android Log Documentation][4da]
 
+### 4e. Debug and fix an application crash (uncaught exception)
+Fixing application crashes starts with the debugger consoler. Look for red text and the "Cause by" text, as this in almost all cases pinpoints the exact problem. Filenames marked in blue color is a good place to start with after.
+
 [1]: #1-fundamental-application-components
 [1a]: #1a-describe-an-applications-key-functional-and-nonfunctional-requirement
 [1b]: #1b-create-an-activity-that-displays-a-layout-resource
@@ -280,3 +284,4 @@ Read about [Android Log Documentation][4da]
 [4c]: #4c-given-a-problem-description-replicate-the-failure
 [4d]: #4d-use-the-system-log-to-output-debug-information
 [4da]: https://developer.android.com/reference/android/util/Log.html
+[4e]: #4e-Debug-and-fix-an-application-crash-uncaught-exception
