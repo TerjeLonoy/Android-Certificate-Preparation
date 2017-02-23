@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Our Theme -->
+    <style name="OurTheme" parent="AppTheme">
+        <!-- This will override AppTheme's colorPrimary value -->
+        <item name="colorPrimary">@color/colorGreen</item>
+    </style>
 </resources>
