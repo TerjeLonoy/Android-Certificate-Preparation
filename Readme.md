@@ -21,6 +21,7 @@
   * [3a. Define a database schema; include tables, fields, and indices][3a]
 
 * [4. Testing and Debugging][4]
+  * [4a. Write and execute a local JVM unit test][4a]
 
 ## 1. Fundamental Application Components
 Understanding of Android's top-level application components (Activity, Service, Broadcast Receiver, Content Provider) and the lifecycle associated with each one. Candidates should be able to describe the types of application logic that would be best suited for each component, and whether that component is executing in the foreground or in the background. This includes strategies for determining how and when to execute background work.
@@ -158,7 +159,7 @@ Determining appropriate use cases for local persisted data, and designing soluti
 ### 3a. Define a database schema; include tables, fields, and indices
 
 A schema are also used to define the structure of entire databases and the relationship between the various tables contained in each database.
-E.g.: 
+E.g.:
 
 ```sql
 
@@ -174,6 +175,41 @@ CREATE INDEX contacts_id_idx ON contacts(id);
 ```
 
 ## 4. Testing and Debugging
+
+Writing tests to verify that the application's logic and user interface are performing as expected, and executing those tests using the developer tools. Candidates should be able to analyze application crashes, and find common bugs such as layout errors and memory leaks. This includes working with the debuggers to step through application code and verify expected behavior.
+
+### 4a. Write and execute a local JVM unit test
+
+The most popular framework for writing test on Java is [JUnit][4aa], and is also the proposed framework by Google. JUnit requires ```testCompile 'junit:junit:4.12'``` to be defined as a dependency. And it is required to also include ```testCompile 'org.mockito:mockito-core:1.10.19'``` as a dependency if the tests requires interaction with Android dependencies.
+
+Tests must be located at ```{module-name}/src/test/java```, and each method within the test class that should be run at testing needs to be annotated with @test. Unit tests are ment to test the applications methods, and a simple one can look something like this:
+
+*Application file:*
+```
+public class Calculator {
+    static public Integer addition (Integer first, Integer second) {
+        return first + second;
+    }
+}
+```
+
+*Test file:*
+```
+import org.junit.Test;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
+public class ExampleUnitTest {
+
+    @Test
+    public void testCalculation() {
+        assertThat(Calculator.addition(2, 2), is(4));
+    }
+}
+```
+
+See and run example in [ExampleUnitTest.java][4ab]
 
 [1]: #1-fundamental-application-components
 [1a]: #1a-describe-an-applications-key-functional-and-nonfunctional-requirement
@@ -220,3 +256,6 @@ CREATE INDEX contacts_id_idx ON contacts(id);
 [3]: #3-persistant-data-storage
 [3a]: #3a-define-a-database-schema-include-tables-fields-and-indices
 [4]: #4-testing-and-debugging
+[4a]: #4a-write-and-execute-a-local-jvm-unit-test
+[4ab]: 
+[4aa]: http://junit.org/junit4/
