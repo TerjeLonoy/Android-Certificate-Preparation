@@ -209,7 +209,7 @@ See [2e. Implement a custom application theme][2e]
 Under the resource folder, add a new resource to the values folder. A dialog will appear with the choice of some qualifiers. Add "Locale" and select a language. Name the file strings.xml and the new language is added to your application.
 
 ### 2k. Apply content descriptions to views for accessibility
-This is simply done by adding ```xml android:contentDescription="A description"``` to your layout objects. Or can be added through java with ```java label.setContentDescription("A description"); ```.
+This is simply done by adding ```android:contentDescription="A description"``` to your layout objects. Or can be added through java with ```{object}.setContentDescription("A description"); ```.
 
 Read about [Androids Developing Accessible Applications Documentation][2ka]
 
