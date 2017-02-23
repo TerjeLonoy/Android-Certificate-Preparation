@@ -192,11 +192,12 @@ Creating custom themes is done by adding a style to [styles.xml][2ea].
 </resources>
 ```
 
-This style can be used in your layouts by adding the parameter ```android:theme="OurTheme"```
+This style can be used in your app by adding the parameter ```android:theme="OurTheme"``` to the application- or activity tag in your manifest. Or by adding it to a layout file.
 
 Read about [Androids Styles and Themes Documentation][2eb]
 
 ### 2f. Apply a custom style to a group of common widgets
+See [2e. Implement a custom application theme][2e]
 
 ### 2g. Define a RecyclerView item list
 
