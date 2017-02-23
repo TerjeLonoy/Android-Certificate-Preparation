@@ -172,6 +172,29 @@ Custom View's can take any number of attributes, and should be defined in [value
 Read about [Androids Creating Custom Views Documentation][2dd].
 
 ### 2e. Implement a custom application theme
+Creating custom themes is done by adding a style to [styles.xml][2ea].
+
+```xml
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Our Theme -->
+    <style name="OurTheme" parent="AppTheme">
+        <!-- This will override AppTheme's colorPrimary value -->
+        <item name="colorPrimary">@color/colorGreen</item>
+    </style>
+</resources>
+```
+
+This style can be used in your layouts by adding the parameter ```android:theme="OurTheme"```
+
+Read about [Androids Styles and Themes Documentation][2eb]
 
 ### 2f. Apply a custom style to a group of common widgets
 
@@ -318,6 +341,8 @@ Extending applications to integrate with interfaces outside the core application
 [2dd]: https://developer.android.com/training/custom-views/index.html
 [2de]: https://developer.android.com/reference/android/graphics/Paint.html
 [2e]: #2e-implement-a-custom-application-theme
+[2ea]: ./AndroidCertificationPreparation/app/src/main/res/values/styles.xml
+[2eb]: https://developer.android.com/guide/topics/ui/themes.html
 [2f]: #2f-apply-a-custom-style-to-a-group-of-common-widgets
 [2g]: #2g-define-a-recyclerview-item-list
 [2h]: #2h-bind-local-data-to-a-recyclerview-list
