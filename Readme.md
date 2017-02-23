@@ -267,6 +267,7 @@ Fixing lifecycle issues can be simplified by putting breakpoints at the start an
 Data binding issues are often cause by either null pointers or type mismatch. Another big offender is trying to bind data to a view before the views activity has been loaded.
 
 ## 5. Enhanced System Integration
+Extending applications to integrate with interfaces outside the core application experience through notifications and app widgets. This includes displaying information to the user through these elements and keeping that information up to date. Candidates should also understand how to provide proper navigation from these external interfaces into the application's main task, including appropriate handling of deep links.
 
 ### 5a. Create an app widget that displays on the device home screen
 
@@ -316,14 +317,14 @@ Data binding issues are often cause by either null pointers or type mismatch. An
 [2dc]: ./AndroidCertificationPreparation/app/src/main/res/layout/activity_customview.xml
 [2dd]: https://developer.android.com/training/custom-views/index.html
 [2de]: https://developer.android.com/reference/android/graphics/Paint.html
-[2e]:
-[2f]:
-[2g]:
-[2h]:
-[2i]:
-[2j]:
-[2k]:
-[2l]:
+[2e]: #2e-implement-a-custom-application-theme
+[2f]: #2f-apply-a-custom-style-to-a-group-of-common-widgets
+[2g]: #2g-define-a-recyclerview-item-list
+[2h]: #2h-bind-local-data-to-a-recyclerview-list
+[2i]: #2i-implement-menu-based-or-drawer-navigation
+[2j]: #2j-localize-the-applications-ui-text-into-one-other-language
+[2k]: #2k-apply-content-descriptions-to-views-for-accessibility
+[2l]: #2l-add-accessibility-hooks-to-a-custom-view
 [3]: #3-persistant-data-storage
 [3a]: #3a-define-a-database-schema-include-tables-fields-and-indices
 [4]: #4-testing-and-debugging
