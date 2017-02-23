@@ -16,6 +16,14 @@
   * [2b. Describe interactions between UI, background task, and data persistence][2b]
   * [2c. Construct a layout using XML or Java code][2c]
   * [2d. Create a custom view class and add it to a layout][2d]
+  * [2e. Implement a custom application theme][2e]
+  * [2f. Apply a custom style to a group of common widgets][2f]
+  * [2g. Define a RecyclerView item list][2g]
+  * [2h. Bind local data to a RecyclerView list][2h]
+  * [2i. Implement menu-based or drawer navigation][2i]
+  * [2j. Localize the application's UI text into one other language][2j]
+  * [2k. Apply content descriptions to views for accessibility][2k]
+  * [2l. Add accessibility hooks to a custom view][2l]
 
 * [3. Persistent Data Storage][3]
   * [3a. Define a database schema; include tables, fields, and indices][3a]
@@ -163,6 +171,22 @@ Custom View's can take any number of attributes, and should be defined in [value
 
 Read about [Androids Creating Custom Views Documentation][2dd].
 
+### 2e. Implement a custom application theme
+
+### 2f. Apply a custom style to a group of common widgets
+
+### 2g. Define a RecyclerView item list
+
+### 2h. Bind local data to a RecyclerView list
+
+### 2i. Implement menu-based or drawer navigation
+
+### 2j. Localize the application's UI text into one other language
+
+### 2k. Apply content descriptions to views for accessibility
+
+### 2l. Add accessibility hooks to a custom view
+
 ## 3. Persistent Data Storage
 
 Determining appropriate use cases for local persisted data, and designing solutions to implement data storage using files, preferences, and databases. This includes implementing strategies for bundling static data with applications, caching data from remote sources, and managing user-generated private data. Candidates should also be able to describe platform features that allow applications to store data securely and share that data with other applications in a secure manner.
@@ -292,6 +316,14 @@ Data binding issues are often cause by either null pointers or type mismatch. An
 [2dc]: ./AndroidCertificationPreparation/app/src/main/res/layout/activity_customview.xml
 [2dd]: https://developer.android.com/training/custom-views/index.html
 [2de]: https://developer.android.com/reference/android/graphics/Paint.html
+[2e]:
+[2f]:
+[2g]:
+[2h]:
+[2i]:
+[2j]:
+[2k]:
+[2l]:
 [3]: #3-persistant-data-storage
 [3a]: #3a-define-a-database-schema-include-tables-fields-and-indices
 [4]: #4-testing-and-debugging
