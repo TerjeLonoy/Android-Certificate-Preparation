@@ -22,6 +22,7 @@
 
 * [4. Testing and Debugging][4]
   * [4a. Write and execute a local JVM unit test][4a]
+  * [4b. Write and execute a device UI test][4b]
 
 ## 1. Fundamental Application Components
 Understanding of Android's top-level application components (Activity, Service, Broadcast Receiver, Content Provider) and the lifecycle associated with each one. Candidates should be able to describe the types of application logic that would be best suited for each component, and whether that component is executing in the foreground or in the background. This includes strategies for determining how and when to execute background work.
@@ -157,7 +158,6 @@ Read about [Androids Creating Custom Views Documentation][2dd].
 Determining appropriate use cases for local persisted data, and designing solutions to implement data storage using files, preferences, and databases. This includes implementing strategies for bundling static data with applications, caching data from remote sources, and managing user-generated private data. Candidates should also be able to describe platform features that allow applications to store data securely and share that data with other applications in a secure manner.
 
 ### 3a. Define a database schema; include tables, fields, and indices
-
 A schema are also used to define the structure of entire databases and the relationship between the various tables contained in each database.
 E.g.:
 
@@ -175,11 +175,9 @@ CREATE INDEX contacts_id_idx ON contacts(id);
 ```
 
 ## 4. Testing and Debugging
-
 Writing tests to verify that the application's logic and user interface are performing as expected, and executing those tests using the developer tools. Candidates should be able to analyze application crashes, and find common bugs such as layout errors and memory leaks. This includes working with the debuggers to step through application code and verify expected behavior.
 
 ### 4a. Write and execute a local JVM unit test
-
 The most popular framework for writing test on Java is [JUnit][4aa], and is also the proposed framework by Google. JUnit requires ```testCompile 'junit:junit:4.12'``` to be defined as a dependency. And it is required to also include ```testCompile 'org.mockito:mockito-core:1.10.19'``` as a dependency if the tests requires interaction with Android dependencies.
 
 Tests must be located at ```{module-name}/src/test/java```, and each method within the test class that should be run at testing needs to be annotated with @test. Unit tests are ment to test the applications methods, and a simple one can look something like this:
@@ -210,6 +208,13 @@ public class ExampleUnitTest {
 ```
 
 See and run example in [ExampleUnitTest.java][4ab]
+Read about [Androids Building Local Unit Tests Documentation][4ac] for more information
+
+### 4b. Write and execute a device UI test
+For writing UI tests Espresso is recommended by Google. Espresso tests can be both programmed, or point-to-click created. Espresso requires ```androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'``` to be defined as a dependency in your modules build.grade file. To record a UI test in Android Studio, simply click "Run->Record Espresso Test" in the toolbar.
+
+See an example in [MainActivityTest.java][4ba]
+Read about [Androids Testing UI for a Single App Documentation][4bb]
 
 [1]: #1-fundamental-application-components
 [1a]: #1a-describe-an-applications-key-functional-and-nonfunctional-requirement
@@ -257,5 +262,9 @@ See and run example in [ExampleUnitTest.java][4ab]
 [3a]: #3a-define-a-database-schema-include-tables-fields-and-indices
 [4]: #4-testing-and-debugging
 [4a]: #4a-write-and-execute-a-local-jvm-unit-test
-[4ab]: ./AndroidCertificationPreparation/app/src/test/java/com/acp/terjelonoy/androidcertificationpreparation/ExampleUnitTest.java
 [4aa]: http://junit.org/junit4/
+[4ab]: ./AndroidCertificationPreparation/app/src/test/java/com/acp/terjelonoy/androidcertificationpreparation/ExampleUnitTest.java
+[4ac]: https://developer.android.com/training/testing/unit-testing/local-unit-tests.html#build
+[4b]: #4b-write-and-execute-a_device-ui-test
+[4ba]: ./AndroidCertificationPreparation/app/src/androidTest/java/com/acp/terjelonoy/androidcertificationpreparation/MainActivityTest.java
+[4bb]: https://developer.android.com/training/testing/ui-testing/espresso-testing.html
