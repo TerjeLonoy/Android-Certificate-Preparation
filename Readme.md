@@ -206,6 +206,7 @@ See [2e. Implement a custom application theme][2e]
 ### 2i. Implement menu-based or drawer navigation
 
 ### 2j. Localize the application's UI text into one other language
+Under the resource folder, add a new resource to the values folder. A dialog will appear with the choice of some qualifiers. Add "Locale" and select a language. Name the file strings.xml and the new language is added to your application.
 
 ### 2k. Apply content descriptions to views for accessibility
 
