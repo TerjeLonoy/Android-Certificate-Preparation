@@ -214,6 +214,7 @@ Read about [Androids Building Local Unit Tests Documentation][4ac] for more info
 For writing UI tests Espresso is recommended by Google. Espresso tests can be both programmed, or point-to-click created. Espresso requires ```androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'``` to be defined as a dependency in your modules build.grade file. To record a UI test in Android Studio, simply click "Run->Record Espresso Test" in the toolbar.
 
 See an example in [MainActivityTest.java][4ba]
+
 Read about [Androids Testing UI for a Single App Documentation][4bb]
 
 [1]: #1-fundamental-application-components
