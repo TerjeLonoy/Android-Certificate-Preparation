@@ -209,8 +209,12 @@ See [2e. Implement a custom application theme][2e]
 Under the resource folder, add a new resource to the values folder. A dialog will appear with the choice of some qualifiers. Add "Locale" and select a language. Name the file strings.xml and the new language is added to your application.
 
 ### 2k. Apply content descriptions to views for accessibility
+This is simply done by adding ```xml android:contentDescription="A description"``` to your layout objects. Or can be added through java with ```java label.setContentDescription("A description"); ```.
+
+Read about [Androids Developing Accessible Applications Documentation][2ka]
 
 ### 2l. Add accessibility hooks to a custom view
+See [2k. Apply content descriptions to views for accessibility][2k]
 
 ## 3. Persistent Data Storage
 
@@ -351,6 +355,7 @@ Extending applications to integrate with interfaces outside the core application
 [2i]: #2i-implement-menu-based-or-drawer-navigation
 [2j]: #2j-localize-the-applications-ui-text-into-one-other-language
 [2k]: #2k-apply-content-descriptions-to-views-for-accessibility
+[2ka]: https://developer.android.com/training/accessibility/accessible-app.html
 [2l]: #2l-add-accessibility-hooks-to-a-custom-view
 [3]: #3-persistant-data-storage
 [3a]: #3a-define-a-database-schema-include-tables-fields-and-indices
