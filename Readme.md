@@ -185,7 +185,7 @@ The most popular framework for writing test on Java is [JUnit][4aa], and is also
 Tests must be located at ```{module-name}/src/test/java```, and each method within the test class that should be run at testing needs to be annotated with @test. Unit tests are ment to test the applications methods, and a simple one can look something like this:
 
 *Application file:*
-```
+```java
 public class Calculator {
     static public Integer addition (Integer first, Integer second) {
         return first + second;
@@ -194,7 +194,7 @@ public class Calculator {
 ```
 
 *Test file:*
-```
+```java
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -257,5 +257,5 @@ See and run example in [ExampleUnitTest.java][4ab]
 [3a]: #3a-define-a-database-schema-include-tables-fields-and-indices
 [4]: #4-testing-and-debugging
 [4a]: #4a-write-and-execute-a-local-jvm-unit-test
-[4ab]: 
+[4ab]: ./AndroidCertificationPreparation/app/src/test/java/com/acp/terjelonoy/androidcertificationpreparation/ExampleUnitTest.java
 [4aa]: http://junit.org/junit4/
