@@ -26,6 +26,8 @@
   * [4c. Given a problem description, replicate the failure][4c]
   * [4d. Use the system log to output debug information][4d]
   * [4e. Debug and fix an application crash (uncaught exception)][4e]
+  * [4f. Debug and fix an activity lifecycle issue][4f]
+  * [4g. Debug and fix an issue binding data to views][4g]
 
 ## 1. Fundamental Application Components
 Understanding of Android's top-level application components (Activity, Service, Broadcast Receiver, Content Provider) and the lifecycle associated with each one. Candidates should be able to describe the types of application logic that would be best suited for each component, and whether that component is executing in the foreground or in the background. This includes strategies for determining how and when to execute background work.
@@ -229,6 +231,12 @@ Read about [Android Log Documentation][4da]
 ### 4e. Debug and fix an application crash (uncaught exception)
 Fixing application crashes starts with the debugger consoler. Look for red text and the "Cause by" text, as this in almost all cases pinpoints the exact problem. Filenames marked in blue color is a good place to start with after.
 
+### 4f. Debug and fix an activity lifecycle issue
+Fixing lifecycle issues can be simplified by putting breakpoints at the start and the end of each lifecycle (e.g. onStart() and onResume()), this way you can easily pinpoint which part of the lifecycle that breaks, and go on from there.
+
+### 4g. Debug and fix an issue binding data to views
+Data binding issues are often cause by either null pointers or type mismatch. Another big offender is trying to bind data to a view before the views activity has been loaded.
+
 [1]: #1-fundamental-application-components
 [1a]: #1a-describe-an-applications-key-functional-and-nonfunctional-requirement
 [1b]: #1b-create-an-activity-that-displays-a-layout-resource
@@ -284,4 +292,6 @@ Fixing application crashes starts with the debugger consoler. Look for red text 
 [4c]: #4c-given-a-problem-description-replicate-the-failure
 [4d]: #4d-use-the-system-log-to-output-debug-information
 [4da]: https://developer.android.com/reference/android/util/Log.html
-[4e]: #4e-Debug-and-fix-an-application-crash-uncaught-exception
+[4e]: #4e-debug-and-fix-an-application-crash-uncaught-exception
+[4f]: #4f-debug-and-fix-an-activity-lifecycle-issue
+[4g]: #4g-debug-and-fix-an-issue-binding-data-to-views
