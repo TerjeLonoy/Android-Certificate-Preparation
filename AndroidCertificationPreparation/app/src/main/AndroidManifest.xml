@@ -42,7 +42,7 @@
             android:name=".services.JobScheduleService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <activity android:name=".activities.DatabaseActivity"></activity>
+        <activity android:name=".activities.StorageActivity"></activity>
     </application>
 
 </manifest>

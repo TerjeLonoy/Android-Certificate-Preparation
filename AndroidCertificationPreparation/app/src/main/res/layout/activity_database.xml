@@ -8,6 +8,31 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.acp.terjelonoy.androidcertificationpreparation.activities.DatabaseActivity">
+    tools:context="com.acp.terjelonoy.androidcertificationpreparation.activities.StorageActivity">
 
+    <Button
+        android:text="@string/populate_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/populateBtn"
+        android:layout_marginTop="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/empty_database"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/emptyBtn"
+        android:layout_below="@+id/populateBtn"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/remember_me" />
 </RelativeLayout>

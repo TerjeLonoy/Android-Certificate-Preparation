@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="populate_all">Populate all</string>
+    <string name="empty_database">Empty database</string>
+    <string name="remember_me">Remember me</string>
+</resources>

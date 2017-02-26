@@ -14,4 +14,7 @@
 
     <string name="jobschedule_intro">Some content will load here once you connect to a network</string>
     <string name="jobschedule_done">Our job was completed succesfully!</string>
+    <string name="populate_all">Populate all</string>
+    <string name="empty_database">Empty database</string>
+    <string name="remember_me">Remember me</string>
 </resources>

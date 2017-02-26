@@ -9,12 +9,10 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.acp.terjelonoy.androidcertificationpreparation.activities.CustomViewActivity;
-import com.acp.terjelonoy.androidcertificationpreparation.activities.DatabaseActivity;
+import com.acp.terjelonoy.androidcertificationpreparation.activities.StorageActivity;
 import com.acp.terjelonoy.androidcertificationpreparation.activities.JobSchedulerExampleActivity;
 import com.acp.terjelonoy.androidcertificationpreparation.activities.LoaderExampleActivity;
 import com.acp.terjelonoy.androidcertificationpreparation.managers.AlarmScheduleManager;
-import com.acp.terjelonoy.androidcertificationpreparation.managers.DialogManager;
-import com.acp.terjelonoy.androidcertificationpreparation.managers.NetworkManager;
 
 public class MainActivity extends AppCompatActivity {
     final Context context = this;
@@ -65,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button databaseExampleButton = (Button) findViewById(R.id.database_example_button);
         databaseExampleButton.setOnClickListener( view -> {
-            Intent intent = new Intent(context, DatabaseActivity.class);
+            Intent intent = new Intent(context, StorageActivity.class);
             startActivity(intent);
         });
 

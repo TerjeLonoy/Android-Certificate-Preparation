@@ -1,0 +1,3 @@
+"Medisinsk", "113";
+"Politi", "112";
+"Brann", "110";
