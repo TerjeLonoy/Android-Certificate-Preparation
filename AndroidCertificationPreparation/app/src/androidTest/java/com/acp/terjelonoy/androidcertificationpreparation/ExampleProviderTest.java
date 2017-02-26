@@ -14,14 +14,14 @@ import org.junit.Test;
  */
 
 
-public class ExampleProviderTest extends ProviderTestCase2 {
+public class ExampleProviderTest extends ProviderTestCase2<ContactProvider> {
 
-    public ExampleProviderTest(Class providerClass, String providerAuthority) {
-        super(providerClass, providerAuthority);
+    public ExampleProviderTest() {
+        super(ContactProvider.class, null);
     }
 
     @Test
-    public void testQuery() throws Exception {
+    public void testCase() throws Exception {
         ContactProvider provider = new ContactProvider();
         Uri uri = ContactProvider.CONTENT_URI;
         Cursor cursor = provider.query(uri, null, null, null, null);
