@@ -7,6 +7,7 @@
     <string name="jobschedule_example_button">JobSchedule example</string>
     <string name="customview_example_button">Custom view example</string>
     <string name="database_example_button">SQLite example</string>
+    <string name="recyclerview_example_button">RecyclerView example</string>
 
     <string name="no_phonenumbers">No phonenumbers found, try adding a contact to your phone</string>
 

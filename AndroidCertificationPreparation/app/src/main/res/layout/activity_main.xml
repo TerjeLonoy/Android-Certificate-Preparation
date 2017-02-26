@@ -53,12 +53,22 @@
         android:text="@string/customview_example_button"
         android:textAlignment="textStart"
         android:gravity="start|center" />
+
     <Button
         android:id="@+id/database_example_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/customview_example_button"
         android:text="@string/database_example_button"
+        android:textAlignment="textStart"
+        android:gravity="start|center" />
+
+    <Button
+        android:id="@+id/recyclerview_example_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/database_example_button"
+        android:text="@string/recyclerview_example_button"
         android:textAlignment="textStart"
         android:gravity="start|center" />
 </RelativeLayout>

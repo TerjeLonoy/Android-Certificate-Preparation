@@ -200,6 +200,13 @@ Read about [Androids Styles and Themes Documentation][2eb]
 See [2e. Implement a custom application theme][2e]
 
 ### 2g. Define a RecyclerView item list
+RecyclerView is a ListView that reuses views in order to save memory. A ListView of thousand items can make the application run slowly, but with RecyclerView it will handle this gracefully. The setup is pretty similar as well.
+
+In this project [RecyclerViewExampleActivity.java][2ga] loads [activity_recyclerview_example.xml][2gb] which contains a single RecyclerView Layout. This layout is meant to display a list of other views, in this case, multiple instances of [listitem_pokemon.xml][2gc]. [RecyclerViewExampleActivity.java][2ga] creates a RecyclerView and gives it an adapter, defined in [RecyclerViewAdapter.java][2gd]. The adapter expects a list of object type "Pokemon", defined in [Pokemon.java][2ge]. Once the list has been sent to the adapter, the adapter will go through the list and populate the layout with the objects values.
+
+***NOTE:*** Do not use "height=match_parent" on the listitem view, as the first item will overlap all other items.
+
+Read about [Androids RecyclerView Documentation][2gf]
 
 ### 2h. Bind local data to a RecyclerView list
 
@@ -351,6 +358,12 @@ Extending applications to integrate with interfaces outside the core application
 [2eb]: https://developer.android.com/guide/topics/ui/themes.html
 [2f]: #2f-apply-a-custom-style-to-a-group-of-common-widgets
 [2g]: #2g-define-a-recyclerview-item-list
+[2ga]:
+[2gb]:
+[2gc]:
+[2gd]:
+[2ge]:
+[2gf]:
 [2h]: #2h-bind-local-data-to-a-recyclerview-list
 [2i]: #2i-implement-menu-based-or-drawer-navigation
 [2j]: #2j-localize-the-applications-ui-text-into-one-other-language

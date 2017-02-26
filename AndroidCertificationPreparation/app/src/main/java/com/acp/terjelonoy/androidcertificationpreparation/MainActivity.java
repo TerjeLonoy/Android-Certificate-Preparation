@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.acp.terjelonoy.androidcertificationpreparation.activities.CustomViewActivity;
+import com.acp.terjelonoy.androidcertificationpreparation.activities.RecyclerViewExampleActivity;
 import com.acp.terjelonoy.androidcertificationpreparation.activities.StorageActivity;
 import com.acp.terjelonoy.androidcertificationpreparation.activities.JobSchedulerExampleActivity;
 import com.acp.terjelonoy.androidcertificationpreparation.activities.LoaderExampleActivity;
@@ -67,5 +68,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        Button recyclerViewExampleButton = (Button) findViewById(R.id.recyclerview_example_button);
+        recyclerViewExampleButton.setOnClickListener(view -> {
+            Intent intent = new Intent(context, RecyclerViewExampleActivity.class);
+            startActivity(intent);
+        });
     }
 }
