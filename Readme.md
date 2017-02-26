@@ -308,6 +308,13 @@ Data binding issues are often cause by either null pointers or type mismatch. An
 Extending applications to integrate with interfaces outside the core application experience through notifications and app widgets. This includes displaying information to the user through these elements and keeping that information up to date. Candidates should also understand how to provide proper navigation from these external interfaces into the application's main task, including appropriate handling of deep links.
 
 ### 5a. Create an app widget that displays on the device home screen
+Widgets are registered as receivers in the Manifest. They require a Provider and an InformationProvider. The InformationProvider is meant for giving the device information about the widget, such as update frequency, preview image and such. The Provider is meant for updating the widgets data.
+
+Widget updates can also be triggered from the application itself.
+
+This project has implemented both a [InformationProvider][5ab] and a [Provider][5ac].
+
+Read about [Androids App Widget Documentation][5aa]
 
 ### 5b. Implement a task to update the app widget periodically
 
@@ -409,6 +416,9 @@ notificationManager.notify(1, builder.build());
 [4g]: #4g-debug-and-fix-an-issue-binding-data-to-views
 [5]: #5-enhanced-system-integration
 [5a]: #5a-create-an-app-widget-that-displays-on-the-device-home-screen
+[5aa]: https://developer.android.com/guide/topics/appwidgets/index.html
+[5ab]:
+[5ac]: 
 [5b]: #5b-implement-a-task-to-update-the-app-widget-periodically
 [5c]: #5c-create-and-display-a-notification-to-the-user
 [5ca]: https://developer.android.com/reference/android/app/NotificationManager.html
