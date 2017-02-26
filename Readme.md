@@ -358,12 +358,12 @@ Extending applications to integrate with interfaces outside the core application
 [2eb]: https://developer.android.com/guide/topics/ui/themes.html
 [2f]: #2f-apply-a-custom-style-to-a-group-of-common-widgets
 [2g]: #2g-define-a-recyclerview-item-list
-[2ga]:
-[2gb]:
-[2gc]:
-[2gd]:
-[2ge]:
-[2gf]:
+[2ga]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/activities/RecyclerViewExampleActivity.java
+[2gb]: ./AndroidCertificationPreparation/app/src/main/res/layout/activity_recyclerview_example.xml
+[2gc]: ./AndroidCertificationPreparation/app/src/main/res/layout/listitem_pokemon.xml
+[2gd]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/adapters/RecyclerViewAdapter.java
+[2ge]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/objects/Pokemon.java
+[2gf]: https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html
 [2h]: #2h-bind-local-data-to-a-recyclerview-list
 [2i]: #2i-implement-menu-based-or-drawer-navigation
 [2j]: #2j-localize-the-applications-ui-text-into-one-other-language
