@@ -13,9 +13,9 @@ import java.util.List;
 public class DatabaseHandler extends SQLiteOpenHelper {
 
     private static DatabaseHandler _instance;
-    private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "contactsManager";
-    private static final String TABLE_CONTACTS = "contacts";
+    public static final int DATABASE_VERSION = 1;
+    public static final String DATABASE_NAME = "contactsManager";
+    public static final String TABLE_CONTACTS = "contacts";
 
     public static synchronized DatabaseHandler getInstance(Context context) {
         if (_instance == null) {
@@ -59,6 +59,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     public Contact getContact(int id) {
 
+        Cursor cursor = getContactCursor(id);
+
+        if (cursor != null) {
+            new Contact(Integer.parseInt(cursor.getString(0)),
+                    cursor.getString(1), cursor.getString(2));
+        }
+        return null;
+    }
+
+    public Cursor getContactCursor(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(TABLE_CONTACTS, new String[] { KEY_ID,
@@ -68,17 +78,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         if (cursor != null)
             cursor.moveToFirst();
 
-        Contact contact = new Contact(Integer.parseInt(cursor.getString(0)),
-                cursor.getString(1), cursor.getString(2));
-        return contact;
+        return cursor;
     }
 
     public List<Contact> getAllContacts() {
         List<Contact> contactList = new ArrayList();
-        String selectQuery = "SELECT  * FROM " + TABLE_CONTACTS;
-
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(selectQuery, null);
+        Cursor cursor = getAllContactsCursor();
 
         if (cursor.moveToFirst()) {
             do {
@@ -95,6 +100,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         }
 
         return contactList;
+    }
+
+    public Cursor getAllContactsCursor() {
+        String selectQuery = "SELECT  * FROM " + TABLE_CONTACTS;
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.rawQuery(selectQuery, null);
     }
 
     public int getContactsCount() {

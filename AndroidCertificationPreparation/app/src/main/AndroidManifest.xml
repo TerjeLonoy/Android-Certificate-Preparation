@@ -34,7 +34,10 @@
         <activity android:name=".activities.CustomViewActivity" />
 
         <receiver android:name=".receivers.AlarmReceiver" />
-
+        <provider
+            android:authorities="com.acp.terjelonoy.androidcertificationpreparation.providers.ContactProvider"
+            android:name=".providers.ContactProvider"
+        />
         <service
             android:name=".services.JobScheduleService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
