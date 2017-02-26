@@ -209,8 +209,10 @@ In this project [RecyclerViewExampleActivity.java][2ga] loads [activity_recycler
 Read about [Androids RecyclerView Documentation][2gf]
 
 ### 2h. Bind local data to a RecyclerView list
+See [1c. Fetch local data from disk using a Loader on a background thread][1c]
 
 ### 2i. Implement menu-based or drawer navigation
+Android has [DrawerLayout][2ia] implemented in their SDK. But to create your own implementation of a menu-based navigation you got to have a "Main" activity that controls the navigation flow of the entire application. The Activity can either swap content by using Fragments, or loading other Activities into frames.
 
 ### 2j. Localize the application's UI text into one other language
 Under the resource folder, add a new resource to the values folder. A dialog will appear with the choice of some qualifiers. Add "Locale" and select a language. Name the file strings.xml and the new language is added to your application.
@@ -366,6 +368,7 @@ Extending applications to integrate with interfaces outside the core application
 [2gf]: https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html
 [2h]: #2h-bind-local-data-to-a-recyclerview-list
 [2i]: #2i-implement-menu-based-or-drawer-navigation
+[2ia]: https://developer.android.com/training/implementing-navigation/nav-drawer.html
 [2j]: #2j-localize-the-applications-ui-text-into-one-other-language
 [2k]: #2k-apply-content-descriptions-to-views-for-accessibility
 [2ka]: https://developer.android.com/training/accessibility/accessible-app.html
