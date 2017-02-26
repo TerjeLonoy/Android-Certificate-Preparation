@@ -312,6 +312,24 @@ Extending applications to integrate with interfaces outside the core application
 ### 5b. Implement a task to update the app widget periodically
 
 ### 5c. Create and display a notification to the user
+Notifications are displayed with a NotificationManager, read more about it in [Androids NotificationManager Documentation][5ca] and see example below.
+
+```java
+Intent alarmIntent = new Intent(context, AlarmWakeActivity.class);
+PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, alarmIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+NotificationCompat.Builder builder = new NotificationCompat.Builder(context);
+
+builder.setDefaults(Notification.DEFAULT_LIGHTS|Notification.DEFAULT_SOUND)
+        .setWhen(System.currentTimeMillis())
+        .setAutoCancel(true)
+        .setSmallIcon(R.mipmap.ic_launcher)
+        .setContentTitle("Woken by scheduled alarm")
+        .setContentText("Tap to open app")
+        .setContentIntent(pendingIntent);
+
+NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+notificationManager.notify(1, builder.build());
+```
 
 [1]: #1-fundamental-application-components
 [1a]: #1a-describe-an-applications-key-functional-and-nonfunctional-requirement
@@ -393,3 +411,4 @@ Extending applications to integrate with interfaces outside the core application
 [5a]: #5a-create-an-app-widget-that-displays-on-the-device-home-screen
 [5b]: #5b-implement-a-task-to-update-the-app-widget-periodically
 [5c]: #5c-create-and-display-a-notification-to-the-user
+[5ca]: https://developer.android.com/reference/android/app/NotificationManager.html
