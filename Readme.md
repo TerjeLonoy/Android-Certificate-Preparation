@@ -317,6 +317,7 @@ This project has implemented both a [InformationProvider][5ab] and a [Provider][
 Read about [Androids App Widget Documentation][5aa]
 
 ### 5b. Implement a task to update the app widget periodically
+See [5a. Create an app widget that displays on the device home screen][5a]
 
 ### 5c. Create and display a notification to the user
 Notifications are displayed with a NotificationManager, read more about it in [Androids NotificationManager Documentation][5ca] and see example below.
@@ -417,8 +418,8 @@ notificationManager.notify(1, builder.build());
 [5]: #5-enhanced-system-integration
 [5a]: #5a-create-an-app-widget-that-displays-on-the-device-home-screen
 [5aa]: https://developer.android.com/guide/topics/appwidgets/index.html
-[5ab]:
-[5ac]: 
+[5ab]: ./AndroidCertificationPreparation/app/src/main/res/xml/widget_info.xml
+[5ac]: ./AndroidCertificationPreparation/app/src/main/java/com/acp/terjelonoy/androidcertificationpreparation/widget/WidgetProvider.java
 [5b]: #5b-implement-a-task-to-update-the-app-widget-periodically
 [5c]: #5c-create-and-display-a-notification-to-the-user
 [5ca]: https://developer.android.com/reference/android/app/NotificationManager.html
