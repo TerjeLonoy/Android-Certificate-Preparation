@@ -21,12 +21,24 @@ public class ExampleProviderTest extends ProviderTestCase2<ContactProvider> {
     }
 
     @Test
-    public void testCase() throws Exception {
+    public void testGetAllContacts() throws Exception {
         ContactProvider provider = new ContactProvider();
-        Uri uri = ContactProvider.CONTENT_URI;
+        String URL = "content://" + ContactProvider.PROVIDER_NAME + "/contacts";
+        Uri uri = Uri.parse(URL);
         Cursor cursor = provider.query(uri, null, null, null, null);
-        Log.d("cursor", cursor.getCount()+"");
         assertNotNull(cursor);
+        Log.d("cursor", cursor.getCount()+"");
+    }
+
+    @Test
+    public void testGetFirstContact() throws Exception {
+        ContactProvider provider = new ContactProvider();
+        String URL = "content://" + ContactProvider.PROVIDER_NAME + "/contacts/1";
+        Uri uri = Uri.parse(URL);
+        Cursor cursor = provider.query(uri, null, null, null, null);
+        assertNotNull(cursor);
+        assertEquals(cursor.getCount(), 1);
+        assertEquals(cursor.getString(0), "1");
     }
 
     @Override

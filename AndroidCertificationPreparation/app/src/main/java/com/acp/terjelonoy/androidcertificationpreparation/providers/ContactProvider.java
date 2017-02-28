@@ -12,18 +12,17 @@ import android.util.Log;
 
 public class ContactProvider extends ContentProvider {
 
-    static final String PROVIDER_NAME = "com.acp.terjelonoy.androidcertificationpreparation.providers.ContactProvider";
-    static final String URL = "content://" + PROVIDER_NAME + "/contacts";
-    public static final Uri CONTENT_URI = Uri.parse(URL);
+    public static final String PROVIDER_NAME = "com.acp.terjelonoy.androidcertificationpreparation.providers.ContactProvider";
 
     static final int CONTACTS = 1;
     static final int CONTACT_ID = 2;
 
     static final UriMatcher uriMatcher;
-    static{
+
+    static {
         uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
         uriMatcher.addURI(PROVIDER_NAME, "contacts", CONTACTS);
-        uriMatcher.addURI(PROVIDER_NAME, "contact/#", CONTACT_ID);
+        uriMatcher.addURI(PROVIDER_NAME, "contacts/#", CONTACT_ID);
     }
 
 
@@ -42,8 +41,10 @@ public class ContactProvider extends ContentProvider {
         Log.d("URI", uri.toString());
         DatabaseHandler db = DatabaseHandler.getInstance(getContext());
 
+        System.out.println("Matcher: " + String.valueOf(uriMatcher.match(uri)));
+
         if (uriMatcher.match(uri) == CONTACT_ID) {
-            int contactId = Integer.parseInt(uri.getPathSegments().get(1));
+            int contactId = Integer.parseInt(uri.getLastPathSegment());
             return db.getContactCursor(contactId);
         }
 
