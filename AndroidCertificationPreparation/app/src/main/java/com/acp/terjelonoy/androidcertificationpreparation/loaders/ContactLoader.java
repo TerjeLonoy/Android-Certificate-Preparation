@@ -1,16 +1,21 @@
 package com.acp.terjelonoy.androidcertificationpreparation.loaders;
 
+import android.Manifest;
 import android.app.ListFragment;
 import android.app.LoaderManager;
 import android.content.CursorLoader;
 import android.content.Loader;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.widget.SimpleCursorAdapter;
 
 import com.acp.terjelonoy.androidcertificationpreparation.R;
+
+import static android.support.v4.content.ContextCompat.checkSelfPermission;
 
 /**
  * Created by terjelonoy on 03/02/2017.
@@ -18,6 +23,7 @@ import com.acp.terjelonoy.androidcertificationpreparation.R;
 
 public class ContactLoader extends ListFragment implements LoaderManager.LoaderCallbacks<Cursor>{
     private static final int CONTACT_LOADER = 991;
+    private static final int PERMISSIONS_REQUEST_READ_CONTACTS = 100;
 
     static final String[] CONTACTS_DATA = new String[] {
             ContactsContract.Contacts._ID,
@@ -34,19 +40,26 @@ public class ContactLoader extends ListFragment implements LoaderManager.LoaderC
 
         // Show that no phonenumbers are present
         setEmptyText(getString(R.string.no_phonenumbers));
+        showContacts();
+    }
 
-        // Create empty adapter
-        adapter = new SimpleCursorAdapter(getActivity(),
-                R.layout.listitem_contacts,
-                null,
-                new String[] {ContactsContract.Contacts.DISPLAY_NAME, ContactsContract.CommonDataKinds.Phone.NUMBER},
-                new int[] {R.id.contact_name, R.id.contact_phone});
+    private void showContacts() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && checkSelfPermission(getContext(), Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, PERMISSIONS_REQUEST_READ_CONTACTS);
+        } else {
+            // Create empty adapter
+            adapter = new SimpleCursorAdapter(getActivity(),
+                    R.layout.listitem_contacts,
+                    null,
+                    new String[] {ContactsContract.Contacts.DISPLAY_NAME, ContactsContract.CommonDataKinds.Phone.NUMBER},
+                    new int[] {R.id.contact_name, R.id.contact_phone});
 
-        // Set adapter
-        setListAdapter(adapter);
+            // Set adapter
+            setListAdapter(adapter);
 
-        // Start or reconnect to loader
-        getLoaderManager().initLoader(CONTACT_LOADER, null, this);
+            // Start or reconnect to loader
+            getLoaderManager().initLoader(CONTACT_LOADER, null, this);
+        }
     }
 
     @Override
