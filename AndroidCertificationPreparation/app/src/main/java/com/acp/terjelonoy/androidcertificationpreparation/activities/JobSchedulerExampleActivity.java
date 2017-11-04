@@ -21,6 +21,7 @@ import com.acp.terjelonoy.androidcertificationpreparation.services.JobScheduleSe
 
 public class JobSchedulerExampleActivity extends Activity {
     private static final int SERVICE_JOB_ID = 929;
+    private BroadcastReceiver receiver;
 
     private Activity activity = this;
     private TextView jobDoneLabel;
@@ -51,7 +52,7 @@ public class JobSchedulerExampleActivity extends Activity {
     }
 
     private void addReceiver() {
-        BroadcastReceiver receiver = new BroadcastReceiver() {
+        receiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
                 if (intent.hasExtra("success")) {
@@ -80,5 +81,11 @@ public class JobSchedulerExampleActivity extends Activity {
                 jobDoneLabel.setVisibility(View.GONE);
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(receiver);
     }
 }
