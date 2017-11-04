@@ -1,6 +1,7 @@
-package com.acp.terjelonoy.androidcertificationpreparation.test;
+package com.acp.terjelonoy.androidcertificationpreparation;
 import android.database.Cursor;
 import android.net.Uri;
+import android.provider.ContactsContract;
 import android.support.test.InstrumentationRegistry;
 import android.test.ProviderTestCase2;
 import android.util.Log;
@@ -17,7 +18,7 @@ public class ExampleProviderTest extends ProviderTestCase2{
     @Test
     public void testQuery() {
         ContactProvider provider = new ContactProvider();
-        Uri uri = ContactProvider.CONTENT_URI;
+        Uri uri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;
         Cursor cursor = provider.query(uri, null, null, null, null);
         Log.d("cursor", cursor.getCount()+"");
         assertNotNull(cursor);
