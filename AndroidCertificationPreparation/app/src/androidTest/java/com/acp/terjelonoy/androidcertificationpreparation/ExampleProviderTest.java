@@ -25,7 +25,6 @@ public class ExampleProviderTest extends ProviderTestCase2<ContactProvider> {
         ContactProvider provider = new ContactProvider();
         String URL = "content://" + ContactProvider.PROVIDER_NAME + "/contacts";
         Uri uri = Uri.parse(URL);
-        Thread.sleep(5000);
 
         Cursor cursor = provider.query(uri, null, null, null, null);
         assertNotNull(cursor);
@@ -40,9 +39,9 @@ public class ExampleProviderTest extends ProviderTestCase2<ContactProvider> {
 
         Cursor cursor = provider.query(uri, null, null, null, null);
         assertNotNull(cursor);
-        //TODO: for some reason not getting any contacts, even with animation turned off
-//        assertEquals(cursor.getCount(), 1);
-//        assertEquals(cursor.getString(0), "1");
+        //TODO: for some reason not getting any contacts, even with animation turned off. something to do with new permissions requirements?
+        assertEquals(cursor.getCount(), 1);
+        assertEquals(cursor.getString(0), "1");
     }
 
     @Override
